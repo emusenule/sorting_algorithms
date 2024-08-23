@@ -29,12 +29,4 @@ void bubble_sort(int *array, size_t size)
         if (swapped == 0)
           break;
     }
-
-
-    /* Time complexity details */
-
-    printf("Time Complexity:\n");
-    printf("Best case: O(n)\n");
-    printf("Average case: O(n^2)\n");
-    printf("Worst case: O(n^2)\n");
 }
