@@ -1,45 +1,25 @@
 #ifndef SORT_H
 #define SORT_H
 
-#include <stddef.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-/* Function to print an array */
-void print_array(const int *array, size_t size);
+/**
+ * struct listint_s - Doubly linked list node
+ *
+ * @n: Integer stored in the node
+ * @prev: Pointer to the previous element of the list
+ * @next: Pointer to the next element of the list
+ */
+typedef struct listint_s
+{
+    int n;
+    struct listint_s *prev;
+    struct listint_s *next;
+} listint_t;
 
-/* Bubble Sort */
-void bubble_sort(int *array, size_t size);
-
-/* Insertion Sort */
-void insertion_sort_list(int *array, size_t size);
-
-/* Selection Sort */
-void selection_sort(int *array, size_t size);
-
-/* Quick Sort */
-void quick_sort(int *array, size_t size);
-
-/* Shell Sort */
-void shell_sort(int *array, size_t size);
-
-/* Cocktail Sort */
-void cocktail_sort_list(int *array, size_t size);
-
-/* Counting Sort */
-void counting_sort(int *array, size_t size);
-
-/* Merge Sort */
-void merge_sort(int *array, size_t size);
-
-/* Heap Sort */
-void heap_sort(int *array, size_t size);
-
-/* Radix Sort */
-void radix_sort(int *array, size_t size);
-
-/* Bitonic Sort */
-void bitonic_sort(int *array, size_t size);
-
-/* Quick Sort (Hoare Partition) */
-void quick_sort_hoare(int *array, size_t size);
+/* Function prototypes */
+void print_list(const listint_t *list);
+void insertion_sort_list(listint_t **list);
 
 #endif /* SORT_H */
